@@ -1,14 +1,23 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import auchi from "../assets/img/AUCHI.png";
 import diecisietevoley from "../assets/img/diecisietevoley.png";
-import sportivohaedo from "../assets/img/SPORTIVO HAEDO.png";
-import elrejunte from "../assets/img/EL REJUNTE.png";
+import nosfaltauna from '../assets/img/nosfaltauna.png';
+import triplec from '../assets/img/TRIPLEC.png';
+import alacecho from '../assets/img/2da/Al acecho.png';
+import lacanchita from '../assets/img/2da/LA CANCHITA.png';
 import teamtopo from '../assets/img/teamtopo.png';
 import cadelpa from '../assets/img/CADELPA.png';
-import federal from "../assets/img/FEDERAL.png";
-import acquarella from '../assets/img/ACQUARELLA.png'
+import lavanguardia from '../assets/img/lavanguardia.png';
+import defedecañuelas from '../assets/img/2da/defe de cañuelas.png'
+import clubatletico from '../assets/img/2da/clubatletico.png'
+import acquarella from '../assets/img/ACQUARELLA.png';
+import defedemoreno from '../assets/img/DEFE DE MORENO.png';
 import colorSharp2 from "../assets/img/color-sharp2.png";
-import flechasvermas from '../assets/img/flechasvermas.png'
+import flechasvermas from '../assets/img/flechasvermas.png';
+import porteño from '../assets/img/2da/PORTEÑO.png'
+import yarara from '../assets/img/2da/yarara.png'
+import hienas from '../assets/img/2da/hienas.png'
+import cfc from '../assets/img/2da/cfc.png'
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 import { CardEquipos } from "./CardEquipos";
@@ -50,9 +59,9 @@ export const Equipos = () => {
       imgUrl: cadelpa,
     },
     {
-        title: "aniuq",
+        title: "Mas equipos",
         description:
-          "Conoce todos los equipos que estan participando del torneo de verano",
+          "Conoce todos los equipos",
         imgUrl: flechasvermas,
       },
   ];
@@ -60,39 +69,105 @@ export const Equipos = () => {
 
   const mujeres = [
     {
+      title: "Defensores de Moreno",
+      description: "Ver mas",
+      imgUrl: defedemoreno,
+    },
+    {
       title: "17 voley",
       description: "DESCRIPCION",
       imgUrl: diecisietevoley,
     },
     {
-        title: "17 voley",
-        description: "DESCRIPCION",
-        imgUrl: diecisietevoley,
-      },
-
-    {
-      title: "Sportivo Haedo",
-      description: "otro equipo",
-      imgUrl: sportivohaedo,
+      title: "Nos Falta Una",
+      description: "Ver mas",
+      imgUrl: nosfaltauna,
     },
     {
-      title: "El Rejunte",
-      description: "otro equipo",
-      imgUrl: elrejunte,
+      title: "Triple C",
+      description: "Ver mas",
+      imgUrl: triplec,
     },
     {
-      title: "Federal",
-      description: "otro equipo",
-      imgUrl: federal,
+      title: "La Vanguardia",
+      description: "Ver mas",
+      imgUrl: lavanguardia,
     },
     {
-      title: "aniuq",
+      title: "Mas equipos",
       description:
-        "Conoce todos los equipos que estan participando del torneo de verano",
+        "Conoce todos los equipos",
       imgUrl: flechasvermas,
     },
   ];
-
+  /*Varones Segunda*/
+  const VaronesSegunda = [
+    {
+      title: "Al Acecho",
+      description: "Ver mas", /**ver si puedo cambiar la descripcion por un link que me lleve a la pagina del equipo */
+      imgUrl: alacecho,
+    },
+    {
+      title: "Defesores de Canuelas",
+      description: "Ver mas",
+      imgUrl: defedecañuelas,
+    },
+    {
+      title: "17 Voley",
+      description: "Ver mas",
+      imgUrl: diecisietevoley,
+    },
+    {
+      title: "La Canchita",
+      description: "Ver mas",
+      imgUrl: lacanchita,
+    },
+    {
+      title: "Club Atletico",
+      description: "Ver mas",
+      imgUrl: clubatletico,
+    },
+    {
+        title: "Mas equipos",
+        description:
+          "Conoce todos los equipos",
+        imgUrl: flechasvermas,
+      },
+  ]
+  /*Segunda Mujeres*/
+  const MujeresSegunda = [
+    {
+      title: "C.F.C",
+      description: "Ver mas", /**ver si puedo cambiar la descripcion por un link que me lleve a la pagina del equipo */
+      imgUrl: cfc,
+    },
+    {
+      title: "Hienas",
+      description: "Ver mas",
+      imgUrl: hienas,
+    },
+    {
+      title: "Estudiantil Porteño",
+      description: "Ver mas",
+      imgUrl: porteño,
+    },
+    {
+      title: "A.U.C.H.I",
+      description: "Ver mas",
+      imgUrl: auchi,
+    },
+    {
+      title: "Yarara",
+      description: "Ver mas",
+      imgUrl: yarara,
+    },
+    {
+        title: "Mas equipos",
+        description:
+          "Conoce todos los equipos",
+        imgUrl: flechasvermas,
+      },
+  ]
   return (
     <div>
     <section className="project" id="Equipos">
@@ -203,14 +278,14 @@ export const Equipos = () => {
                    >
                      <Tab.Pane eventKey="first">
                        <Row>
-                         {Equipos.map((project, index) => {
+                         {VaronesSegunda.map((project, index) => {
                            return <CardEquipos key={index} {...project} />;
                          })}
                        </Row>
                      </Tab.Pane>
                      <Tab.Pane eventKey="second">
                        <Row>
-                         {mujeres.map((mujeres, index) => {
+                         {MujeresSegunda.map((mujeres, index) => {
                            return <CardEquipos key={index} {...mujeres} />;
                          })}
                        </Row>
