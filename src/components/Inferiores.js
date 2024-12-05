@@ -12,9 +12,17 @@ import "animate.css";
 import TrackVisibility from "react-on-screen";
 import { CardEquipos } from "./CardEquipos";
 
+// Función para dividir los equipos en grupos de 2 filas de 2 (4 cards por sección)
+const divideIntoRowsOfTwo = (array) => {
+  let result = [];
+  for (let i = 0; i < array.length; i += 2) {
+    result.push(array.slice(i, i + 2)); // 2 elementos por fila
+  }
+  return result;
+};
+
 export const Inferiores = () => {
   /*******Equipos Masculinos****** */
-
   const Equipos = [
     {
       title: "17 Voley",
@@ -32,15 +40,13 @@ export const Inferiores = () => {
       imgUrl: cadelpa,
     },
     {
-        title: "Auchi",
-        description: "Ver mas",
-        imgUrl: auchi,
-      },
-  
+      title: "Auchi",
+      description: "Ver mas",
+      imgUrl: auchi,
+    },
   ];
 
   /*******Equipos Femeninos****** */
-
   const mujeres = [
     {
       title: "Defensores de Moreno",
@@ -62,17 +68,7 @@ export const Inferiores = () => {
       description: "Ver mas",
       imgUrl: lavanguardia,
     },
- 
   ];
-
-  // Función para dividir los equipos en grupos de 2 filas de 2 (4 cards por sección)
-  const divideIntoRowsOfTwo = (array) => {
-    let result = [];
-    for (let i = 0; i < array.length; i += 2) {
-      result.push(array.slice(i, i + 2)); // 2 elementos por fila
-    }
-    return result;
-  };
 
   const equiposMasculinosDivididos = divideIntoRowsOfTwo(Equipos);
   const equiposFemeninosDivididos = divideIntoRowsOfTwo(mujeres);
@@ -87,12 +83,14 @@ export const Inferiores = () => {
                 {({ isVisible }) => (
                   <div
                     className={
-                      isVisible ? "animate__animated animate__fadeIn" : ""} >
+                      isVisible ? "animate__animated animate__fadeIn" : ""
+                    }
+                  >
                     <h2>Sub 18</h2>
                     <div className="d-flex justify-content-between">
                       {/* Equipos Masculinos */}
                       <div className="col-6">
-                        <h3 className="nav-pillsInferiores mb-5 ">Masculino</h3>
+                        <h3 className="nav-pillsInferiores mb-5">Masculino</h3>
                         {equiposMasculinosDivididos.map((grupo, index) => (
                           <Row key={index} className="mb-4">
                             {grupo.map((project, idx) => (
@@ -117,6 +115,11 @@ export const Inferiores = () => {
                           </Row>
                         ))}
                       </div>
+                    </div>
+
+                    {/* Botón debajo de las cards */}
+                    <div className="text-center mt-4">
+                      <button className="custom-button">Ver más equipos</button>
                     </div>
                   </div>
                 )}
