@@ -4,6 +4,7 @@ import { NavBar } from "./components/NavBarpage";
 import { Banner } from "./components/Banner";
 import { Equipos } from "./components/Equipos";
 import { Detalles } from "./components/Detalles";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Banner />
       <Detalles />
       <Equipos />
+      <Footer />
     </div>
   );
 }
