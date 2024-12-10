@@ -1,21 +1,24 @@
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 import { NavBar } from "./components/NavBarpage";
-import { Banner } from "./components/Banner";
-import { Equipos } from "./components/Equipos";
-import { Detalles } from "./components/Detalles";
+import { PaginaEquipos } from "./components/PaginaEquipos";
+import { Torneo } from "./components/Torneo";
 import { Footer } from "./components/Footer";
+import { Home } from "./components/Home";
 
 function App() {
   return (
-    <div className="App">
-      <NavBar /> 
-      <Banner />
-      <Detalles />
-      <Equipos />
-      <Footer />
-    </div>
+      <div className="App">
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} /> {/* Ruta principal (Home) */}
+          <Route path="/PaginaEquipos" element={<PaginaEquipos />} />
+          <Route path="/Torneo" element={<Torneo />} />
+        </Routes>
+        <Footer />
+      </div>
   );
 }
 
 export default App;
+
