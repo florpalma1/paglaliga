@@ -876,3 +876,86 @@ ul li {
   background-color: #0056b3;
 }
 
+/* Encapsula todos los estilos dentro de .formulario-resultados */
+.formulario-resultados {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.formulario {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 100%;
+}
+
+.formulario__titulo {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.formulario__grupo {
+  margin-bottom: 20px;
+}
+
+.formulario__grupo label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+.formulario__grupo input,
+.formulario__grupo select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.formulario__set-grupo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.formulario__set-grupo input {
+  flex: 1;
+}
+
+.formulario__btn-eliminar-set {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.formulario__btn-agregar-set,
+.formulario__btn-submit {
+  display: block;
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.formulario__btn-agregar-set:hover,
+.formulario__btn-submit:hover {
+  background-color: #0056b3;
+}
