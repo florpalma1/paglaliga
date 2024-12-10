@@ -959,3 +959,38 @@ ul li {
 .formulario__btn-submit:hover {
   background-color: #0056b3;
 }
+
+.tabla-posiciones {
+  margin: 2rem auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.tabla-posiciones__titulo {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.tabla-posiciones__tabla {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-posiciones__tabla th,
+.tabla-posiciones__tabla td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.tabla-posiciones__tabla th {
+  background-color: #131313;
+  font-weight: bold;
+}
+
+.tabla-posiciones__tabla tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.tabla-posiciones__tabla tbody tr:hover {
+  background-color: #f1f1f1;
+}
