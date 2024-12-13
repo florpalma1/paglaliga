@@ -1,11 +1,12 @@
-import { FormularioEquipos } from "./FormularioEquipos"
+
 import { FormularioResultados } from "./FormularioResultados"
+import { RegistroEquipos }from "./RegistroEquipos"
 import { TablaPosiciones } from "./TablaPosiciones"
 
 export const PaginaEquipos = () => {
   return (
     <div>
-        <FormularioEquipos/>
+        <RegistroEquipos/>
         <FormularioResultados/>
         <TablaPosiciones/>
     </div>
