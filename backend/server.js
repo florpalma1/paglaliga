@@ -9,6 +9,9 @@ const port = 5000;
 
 app.use(cors());
 
+// Middleware para servir imágenes desde la carpeta 'uploads'
+app.use('/uploads', express.static('uploads'));
+
 // Middleware para registrar cada solicitud (DEBUG)
 app.use((req, res, next) => {
     console.log(`Solicitud recibida: ${req.method} ${req.url}`);
