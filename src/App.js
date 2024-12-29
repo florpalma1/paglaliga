@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { NavBar } from "./components/NavBarpage";
-import { PaginaEquipos } from "./components/PaginaEquipos";
+import { PaginaEquipos } from "./components/pages/Paginaequipos";
 import { Torneo } from "./components/Torneo";
 import { Footer } from "./components/Footer";
 import { Home } from "./components/Home";

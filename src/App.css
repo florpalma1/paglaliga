@@ -1004,3 +1004,389 @@ ul li {
 .tabla-posiciones__tabla tbody tr:hover {
   background-color: #f1f1f1;
 }
+
+/* Estilo general para la sección de equipos */
+.equipos-registrados {
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 1000px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.equipos-registrados h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Lista principal de equipos */
+.registro-equipos-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.registro-equipos-list li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 300px;
+  padding: 1rem;
+  text-align: center;
+  transition: box-shadow 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.registro-equipos-list li:hover {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+/* Título del equipo */
+.registro-equipos-list h3 {
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+  color: #444;
+}
+
+/* Imagen del equipo */
+.registro-equipos-list img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0.5rem auto;
+  border: 2px solid #ddd;
+}
+
+/* Información adicional del equipo */
+.registro-equipos-list p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* Sub-lista de jugadores */
+.registro-equipos-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.registro-equipos-list ul li {
+  font-size: 0.85rem;
+  color: #555;
+  margin: 0.2rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .registro-equipos-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .registro-equipos-list li {
+    width: 90%;
+  }
+}
+
+/*-----------------------------------------------css equipos categorias----------------------------------*/
+/* Colours */
+/* Brand */
+:root {
+  --espn-red: #ff2416;
+  --bg: #181818;
+  --content-bg: #fff;
+  --bg-text: #252525;
+  --text: #fff;
+  --bg-blue: #292d4a;
+  --bg-red: var(--espn-red);
+  --accent: var(--espn-red);
+  --text-accent: #ff352c;
+  --grey: #a3aaad;
+  --dark-grey: #2e2e2e;
+  --border-grey: #f5f5f5;
+  --easing: cubic-bezier(.8,0,.2,1);
+}
+
+/* Animations */
+@keyframes scalewidth-zero-half {
+  0% { transform: scaleX(0) }
+  100% { transform: scaleX(0.5) }
+}
+
+@keyframes slide-up {
+  0% { transform: translateY(100vh) }
+  100% { transform: translateY(0vh) }
+}
+
+@keyframes slide-up-text-offset {
+  0% { transform: translateY(112.5%) }
+  100% { transform: translateY(12.5%) }
+}
+
+@keyframes fade-in {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+@keyframes slide-up-fade-in {
+  0% {
+      transform: translateY(3.5vh);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+/* Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+
+/* Helpers */
+.allcaps {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.separator {
+  display: inline-block;
+  vertical-align: middle;
+  width: 2em;
+  height: 0.05em;
+  background-color: var(--text);
+  opacity: 0.15;
+  margin: 0 0.5em;
+}
+
+.underline-bar {
+  content: '';
+  position: absolute;
+  bottom: -1em;
+  left: 0;
+  width: 100%;
+  height: 0.075em;
+  background-color: var(--accent);
+}
+
+
+/*------------------------------
+Main
+------------------------------*/
+header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 85em;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+header a {
+  color: var(--text);
+}
+
+
+main {
+  position: relative;
+}
+
+.underlay-text {
+  position: absolute;
+  left: 50%;
+  top: 0.85rem;
+  text-transform: uppercase;
+  font-family: Teko;
+  font-size: 20vw;
+  font-weight: 800;
+  letter-spacing: 0;
+  white-space: nowrap;
+  opacity: 0.05;
+  transform: translateX(-50%) translateY(-22.5%) scaleX(0.75) scaleY(1.1);
+  pointer-events: none;
+  overflow: hidden;
+  line-height: 0.65;
+}
+
+.underlay-text span {
+  display: inline-block;
+  position: relative;
+  animation-name: slide-up-text-offset;
+  animation-delay: 0.4s;
+  animation-duration: 1.25s;
+  animation-timing-function: var(--easing);
+  animation-fill-mode: both;
+}
+
+.page-container {
+  font-size: 1rem;
+  max-width: 75em;
+  margin: 6em auto;
+}
+
+.main-title {
+  position: relative;
+  display: inline-block;
+  font-size: 1.35em;
+  text-transform: uppercase;
+  margin-bottom: 3.5em;
+  animation-name: slide-up;
+  animation-duration: 1.25s;
+  animation-timing-function: var(--easing);
+  animation-fill-mode: both;
+}
+
+.main-title::after {
+  content: '';
+  position: absolute;
+  bottom: -1em;
+  left: 0;
+  width: 100%;
+  height: 0.075em;
+  background-color: var(--accent);
+}
+
+.content {
+  position: relative;
+  background-color: var(--content-bg);
+  color: var(--dark-grey);
+  animation-name: slide-up;
+  animation-delay: 0.15s;
+  animation-duration: 1.25s;
+  animation-timing-function: var(--easing);
+  animation-fill-mode: both;
+}
+
+.grid {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  width: 25%;
+  font-size: 1rem;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.card-team {
+  padding: 4em;
+  align-items: center;
+  position: relative;
+  border: 1px solid var(--border-grey);
+  cursor: pointer;
+}
+
+.card-team::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.2em;
+  background-color: var(--accent);
+  transform: scaleX(0.5);
+  animation-name: scalewidth-zero-half;
+  animation-duration: 1.25s;
+  animation-timing-function: var(--easing);
+  animation-fill-mode: both;
+}
+
+.card-team__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-color: var(--bg-blue);
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 0.5em 3em rgba(16,16,30,0.4);
+  opacity: 0;
+  transition: 1s var(--easing);
+  z-index: 1;
+}
+
+.card-team__logo {
+  position: relative;
+  color: var(--grey);
+  margin: 1em 1em 4em;
+  transition: 1s var(--easing);
+  z-index: 1;
+  animation-name: slide-up-fade-in;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.7s;
+}
+
+.card-team__logo .fas {
+  font-size: 3em;
+}
+
+.card-team__number {
+  position: relative;
+  display: inline-block;
+  font-family: Teko;
+  color: var(--text-accent);
+  font-size: 2em;
+  margin-bottom: 1em;
+  transform: scaleX(0.7);
+  font-weight: 600;
+  transition: 1s var(--easing);
+  z-index: 1;
+  animation-name: slide-up-fade-in;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.7s;
+}
+
+.card-team__number::after {
+  content: '';
+  position: absolute;
+  bottom: -0.2em;
+  left: 12.5%;
+  width: 75%;
+  height: 0.05em;
+  background-color: #D6DDE0;
+}
+
+.card-team__name {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: var(--dark-grey);
+  transition: 1s var(--easing);
+  z-index: 1;
+  animation-name: slide-up-fade-in;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.7s;
+}
+
+.card-team:hover .card-team__bg {
+  opacity: 1;
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+
+.card-team:hover .card-team__logo,
+.card-team:hover .card-team__number,
+.card-team:hover .card-team__name {
+  color: var(--text);
+}
