@@ -1,91 +1,50 @@
-import { useState, useEffect, useRef } from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import laligalogo from "../assets/img/laligalogo.png";
-import { ArrowRightCircle } from "react-bootstrap-icons";
-import "animate.css";
-import TrackVisibility from "react-on-screen";
+import React from 'react';
+import { Carousel } from 'react-bootstrap'; // Importa el Carousel de React Bootstrap
+import '../Banner.css'; // Asegúrate de tener este archivo CSS con las clases apropiadas.
 
 export const Banner = () => {
-  const [loopNum, setLoopNum] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [text, setText] = useState("");
-  const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const toRotate = ["Torneo de Verano", "Edición 2025"];
-  const period = 2000;
-
-  const ticker = useRef(null);
-
-  useEffect(() => {
-    ticker.current = setTimeout(() => {
-      tick();
-    }, delta);
-
-    return () => clearTimeout(ticker.current);
-  }, [text, isDeleting, delta]);
-
-  const tick = () => {
-    const i = loopNum % toRotate.length;
-    const fullText = toRotate[i];
-    const updatedText = isDeleting
-      ? fullText.substring(0, text.length - 1)
-      : fullText.substring(0, text.length + 1);
-
-    setText(updatedText);
-
-    if (isDeleting) {
-      setDelta((prevDelta) => prevDelta / 2);
-    }
-
-    if (!isDeleting && updatedText === fullText) {
-      setIsDeleting(true);
-      setDelta(period);
-    } else if (isDeleting && updatedText === "") {
-      setIsDeleting(false);
-      setLoopNum(loopNum + 1);
-      setDelta(500);
-    }
-  };
+  const slides = [
+    {
+      title: 'MANCHESTER & THE UCL CHAMPION',
+      pretitle: 'WELCOME TO OUR FOOTBALL CLUB',
+      imageClass: 'banner-single-1', // Clase para el fondo
+    },
+    {
+      title: 'ANDERSON & THE WORLD CUP WINNER',
+      pretitle: 'WELCOME TO OUR FOOTBALL CLUB',
+      imageClass: 'banner-single-1_2', // Clase para el fondo
+    },
+    {
+      title: 'HENDERSON & THE WORLD CUP WINNER',
+      pretitle: 'WELCOME TO OUR FOOTBALL CLUB',
+      imageClass: 'banner-single-3', // Clase para el fondo
+    },
+  ];
 
   return (
-    <section className="banner" id="home">
-      <Container>
-        <Row className="align-items-center">
-          <Col xs={12} md={6} xl={7}>
-            <TrackVisibility>
-              {({ isVisible }) => (
-                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                  <span className="tagline">Bienvenidos a la Liga del Oeste</span>
-                  <h1>
-                    {`Próximamente`} <br />
-                    <span className="txt-rotate">
-                      <span className="wrap">{text}</span>
-                    </span>
-                  </h1>
-                  <p>
-                    Únete al evento deportivo más esperado del año. La edición 2025 del Torneo
-                    de Verano está por comenzar. ¡No te lo pierdas!
-                  </p>
-                  <button
-                    onClick={() => console.log("connect")}
-                    aria-label="Más información"
-                  >
-                    Más información <ArrowRightCircle size={25} />
-                  </button>
+    <div className="banner banner1">
+      <Carousel interval={5000} pause="hover" indicators={false} controls={true}>
+        {slides.map((slide, index) => (
+          <Carousel.Item key={index}>
+            <div className={`banner-single ${slide.imageClass} banner-bg`}>
+              <div className="container">
+                <div className="banner-content">
+                  <span className="pretitle">{slide.pretitle}</span>
+                  <h1 className="banner-heading">{slide.title}</h1>
+                  <div className="banner-btn-area">
+                    <a href="#0" className="team-btn banner-btn">
+                      OUR TEAM <i className="far fa-long-arrow-right ml--5"></i>
+                    </a>
+                    <a href="#0" className="nxt-match-btn banner-btn">
+                      NEXT MATCH <i className="far fa-long-arrow-right ml--5"></i>
+                    </a>
+                  </div>
                 </div>
-              )}
-            </TrackVisibility>
-          </Col>
-          <Col xs={12} md={6} xl={5}>
-            <TrackVisibility>
-              {({ isVisible }) => (
-                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={laligalogo} alt="Logo de La Liga del Oeste" />
-                </div>
-              )}
-            </TrackVisibility>
-          </Col>
-        </Row>
-      </Container>
-    </section>
+              </div>
+            </div>
+          </Carousel.Item>
+        ))}
+      </Carousel>
+    </div>
   );
 };

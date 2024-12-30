@@ -1,12 +1,13 @@
 
 import "animate.css";
-import varonesjugando from '../assets/img/'
+import holaa from '../assets/img/holaa.JPG'
+import hola2 from '../assets/img/hola2.JPG'
 
 
-
+/*cambiar las imagenes de las categorias correspondientes*/
 const teamsData = [
-  { number: 1, name: "1era Masculino", imageUrl: varonesjugando },
-  { number: 2, name: "1era Femenino", imageUrl: '//i.lensdump.com/i/AZInIA.jpg' },
+  { number: 1, name: "1era Masculino", imageUrl: holaa },
+  { number: 2, name: "1era Femenino", imageUrl: hola2 },
   { number: 3, name: "2da Maculino", imageUrl: '//i.lensdump.com/i/AZInIA.jpg' },
   { number: 4, name: "2da Femenino", imageUrl: '//i.lensdump.com/i/AZInIA.jpg' },
   { number: 5, name: "Sub 18 Masculino", imageUrl: '//i.lensdump.com/i/AZInIA.jpg' },
