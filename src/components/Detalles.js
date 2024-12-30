@@ -1,70 +1,86 @@
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
-import meter4 from "../assets/img/meter4.svg";
-import meter5 from "../assets/img/meter5.svg";
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
-import colorSharp from "../assets/img/color-sharp.png"
-
-/*Agregar imagenes representativa de cada item informativo*/
+import React, { useState, useEffect } from 'react';
+import '../Detalles.css';
+import tdvlogo from '../assets/img/TDVLOGO.jpeg'
 
 export const Detalles = () => {
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1
-    }
-  };
+    // Estado para los valores del countdown
+    const [timeLeft, setTimeLeft] = useState({
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0,
+    });
 
-  return (
-    <section className="skill" id="skills">
-        <div className="container">
-            <div className="row">
-                <div className="col-12">
-                    <div className="skill-bx wow zoomIn">
-                        <h2>Torneo de Verano 2025</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
-                       <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                            <div className="item">
-                                <img src={meter2} alt="numero de edicion" />
-                                <h5>5ta Edicion</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter1} alt="cantidad de canchas" />
-                                <h5>Canchas</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter3} alt="numero de quipos" />
-                                <h5>+ de 100 equipos inscriptos</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter4} alt="numero de categorias" />
-                                <h5>Categorias</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter5} alt="cantidad de sedes" />
-                                <h5>Sedes</h5>
-                            </div>
-                        </Carousel>
+    useEffect(() => {
+        // Fecha objetivo del countdown
+        const targetDate = new Date("2025-01-11T00:00:00").getTime();
+
+        // Función para calcular el tiempo restante
+        const updateCountdown = () => {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance > 0) {
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor(
+                    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+                );
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                setTimeLeft({ days, hours, minutes, seconds });
+            } else {
+                setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+            }
+        };
+
+        // Actualiza el countdown cada segundo
+        const interval = setInterval(updateCountdown, 1000);
+
+        // Limpia el intervalo al desmontar el componente
+        return () => clearInterval(interval);
+    }, []);
+
+    return (
+        <div className="rts-latest-match">
+            <div className="container">
+                <div className="latest-match-inner">
+                    <div className="club-area">
+                        <div className="club-logo">
+                            <img src={tdvlogo} alt="Club Logo" />
+                        </div>
+                        <div className="content">
+                            <h3 className="club-text">TORNEO DE <br />
+                                VERANO
+                            </h3>
+                        </div>
+                        <span className="match-type">APERTURA</span>
                     </div>
+                    <div className="match-countdown-area">
+                        <div className="countdown">
+                            <div className="countdown-el days-c">
+                                <span className="value" id="days">{timeLeft.days}</span>
+                            </div>
+                            <span className="letter">D</span>
+                            <div className="countdown-el hours-c">
+                                <span className="value" id="hours">{timeLeft.hours}</span>
+                            </div>
+                            <span className="letter">H</span>
+                            <div className="countdown-el mins-c">
+                                <span className="value" id="mins">{timeLeft.minutes}</span>
+                            </div>
+                            <span className="letter">M</span>
+                            <div className="countdown-el seconds-c">
+                                <span className="value" id="seconds">{timeLeft.seconds}</span>
+                            </div>
+                            <span className="letter">S</span>
+                        </div>
+                    </div>
+                    <a href="contact.html" className="ticket-btn">VER MAS</a>
                 </div>
             </div>
         </div>
-        <img className="background-image-left" src={colorSharp} alt="Image" />
-    </section>
-  )
-}
+    );
+};
+
+
