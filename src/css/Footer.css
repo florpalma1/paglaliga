@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.footer {
+    background: #111111;
+  }
+
+
+  .footer .footer-inner {
+    padding: 60px 30px 60px 30px;
+    flex: 1 1 33%; /* Hace que cada columna ocupe un tercio del espacio */
+  }
+
+
+  .footer .col-xl-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Esto asegura que el contenido esté centrado horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    text-align: center; /* Alinea el texto al centro */
+  }
+
+  .footer .footer-logo {
+    margin-bottom: 10px;  
+  }
+
+  .footer .footer-logo img {
+    max-width: 90px;
+  }
+ 
+  .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer .footer-text {
+    max-width: 240px;
+    color: #bcbcbc;
+    opacity: 0.9;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    margin-bottom: 40px;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .platform {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #1d1d1d;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 50px; /* Esto ayuda a centrar los íconos dentro del círculo */
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .footer .social-links {
+    display: flex;               /* Asegura que los íconos se muestren en una fila */
+    justify-content: center;     /* Centra la fila horizontalmente */
+    gap: 10px;                   /* Espaciado entre los círculos */
+  }
+  
+  .footer .social-links .platform {
+    color: #fff;
+    display: flex;               /* Usado para centrar el ícono dentro del círculo */
+    align-items: center;         /* Centra el ícono verticalmente */
+    justify-content: center;     /* Centra el ícono horizontalmente */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #1d1d1d;
+  }
+  
+  .footer .social-links .platform i {
+    color: #fff;
+    visibility: visible;         /* Asegura que el ícono sea visible */
+    opacity: 1;                  /* Asegura que el ícono esté completamente visible */
+    -webkit-transform: translateX(0); /* Asegura que no haya movimiento inicial */
+    transform: translateX(0);
+    margin-left: 0;              /* Sin márgenes adicionales */
+    font-size: 20px;             /* Aumenta el tamaño del ícono */
+    -webkit-transition: 500ms;
+    transition: 500ms;
+  }
+  
+  .footer .social-links .platform:hover {
+    background: var(--theme-color);
+  }
+
+  .footer .social-links .platform:hover i {
+    color: #1dbebe; /* Cambia el color del ícono al pasar el cursor */
+  }
+  
+  .footer .footer-widget-title {
+    color: #fff;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 23px;
+    margin-bottom: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-family: 'oswald', 'serif';
+  }
+  .footer .footer-widget-title .decorator {
+    width: 20px;
+    height: 2px;
+    background: var(--theme-color);
+    margin: auto 0;
+    margin-right: 20px;
+    color: #1dbebe;
+  }
+  .footer .widget-list-item {
+    margin-bottom: 10px;
+  }
+  .footer .widget-list-item a {
+    font-family: 'oswald', 'serif';
+    position: relative;
+    color: #888888;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    -webkit-transition: all 200ms;
+    transition: all 200ms;
+  }
+  .footer .widget-list-item a:hover {
+    color: #fff;
+  }
+ 
+  .footer .cata-widget {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Divide en 2 columnas de tamaño igual */
+    gap: 15px; /* Espacio entre los enlaces */
+    max-height: 250px;
+  }
+  
+  .footer .cata-widget .widget-list-item {
+    list-style: none;
+  }
+
+  .footer .cata-widget .widget-list-item a {
+    text-decoration: none; /* Elimina el subrayado */
+  }
+
+  .footer .address-widget .widget-list-item {
+    max-width: 225px;
+    border-bottom: 1px solid #212121;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .footer .address-widget .widget-list-item a,
+  .footer .address-widget .widget-list-item span {
+    color: #fff;
+    font-weight: 400;
+  }
+  .footer .address-widget .widget-list-item i {
+    margin-right: 15px;
+    color: #1dbebe;
+    font-size: 22px;
+    -webkit-transform: translateY(7px);
+            transform: translateY(7px);
+  }
+  .footer .footer-bottom-area {
+    padding: 25px 0;
+    background: #000;
+  }
+  .footer .footer-bottom-area .bottom-area-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer .footer-bottom-area .copyright {
+    color: #8b8b8b;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .footer .footer-bottom-area .copyright .brand {
+    color: #fff;
+  }
+  .footer .footer-bottom-area .footer-bottom-links a {
+    color: #8b8b8b;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    margin-right: 40px;
+  }
+  .footer .footer-bottom-area .footer-bottom-links a:last-child {
+    margin-right: 0;
+  }
+  .footer .footer-bottom-area .footer-bottom-links a:hover {
+    color: var(--theme-color);
+  }
+  .footer .footer-bottom-area .footer-bottom-links .powered-product {
+    color: #fff;
+  }
+  @media (max-width: 1200px) {
+    .footer .footer-widget {
+      margin-bottom: 40px;
+    }
+    .footer .footer-widget .footer-widget-title {
+      margin-bottom: 30px;
+      font-size: 18px;
+    }
+    .footer .footer-widget .footer-widget-title .decorator {
+      width: 15px;
+      margin-right: 12px;
+    }
+    .footer .footer-widget .widget-list-item {
+      font-size: 15px;
+      margin-bottom: 7px;
+    }
+    .footer .footer-widget.address-widget .widget-list-item {
+      padding-bottom: 8px;
+      margin-bottom: 8px;
+    }
+    .footer .footer-widget.news-widget a {
+      font-size: 15px;
+      font-weight: 500;
+    }
+    .footer .footer-widget .footer-text {
+      max-width: 333px;
+      margin-bottom: 20px;
+    }
+  }
+  @media (max-width: 768px) {
+    .footer .footer-bottom-area .bottom-area-inner {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+    }
+    .footer .footer-bottom-area .copyright {
+      text-align: center;
+      line-height: 40px;
+      margin-bottom: 20px;
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+    .footer .footer-bottom-area .footer-bottom-links a {
+      font-size: 14px;
+      margin-right: 15px;
+    }
+  }
+  
