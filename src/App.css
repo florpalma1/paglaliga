@@ -1,11 +1,11 @@
-/************ Fonts ************/
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+  /************ Fonts ************/
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-.bebas-neue-regular {
-  font-family: "Bebas Neue", serif;
-  font-weight: 400;
-  font-style: normal;
-}
+  .bebas-neue-regular {
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -14,6 +14,167 @@
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
+}
+/*----------------------------*/
+
+.mt--60 {
+  margin-top: 60px;
+}
+
+.mt--50 {
+  margin-top: 50px;
+}
+
+.mt--40 {
+  margin-top: 40px;
+}
+
+.mt--30 {
+  margin-top: 30px;
+}
+
+.mt--20 {
+  margin-top: 20px;
+}
+
+.mt--10 {
+  margin-top: 10px !important;
+}
+
+.m-0 {
+  margin: 0 !important;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mb--5 {
+  margin-bottom: 5px;
+}
+
+.mb--15 {
+  margin-bottom: 15px;
+}
+
+.mb--20 {
+  margin-bottom: 20px !important;
+}
+
+.mb--25 {
+  margin-bottom: 25px;
+}
+
+.mb--30 {
+  margin-bottom: 30px;
+}
+
+.mb--40 {
+  margin-bottom: 40px !important;
+}
+
+.mb--50 {
+  margin-bottom: 50px !important;
+}
+
+.mb--60 {
+  margin-bottom: 60px;
+}
+
+.mb--70 {
+  margin-bottom: 70px;
+}
+
+.mb--80 {
+  margin-bottom: 80px !important;
+}
+
+.mb--100 {
+  margin-bottom: 100px;
+}
+
+.mb--125 {
+  margin-bottom: 125px;
+}
+
+.mr--5 {
+  margin-right: 5px;
+}
+
+.mr--15 {
+  margin-right: 15px;
+}
+
+.mr--20 {
+  margin-right: 20px;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.ml--5 {
+  margin-left: 5px;
+}
+
+.ml--10 {
+  margin-left: 10px;
+}
+
+.ml--15 {
+  margin-left: 15px;
+}
+
+.ml--20 {
+  margin-left: 20px;
+}
+
+.ml--30 {
+  margin-left: 30px;
+}
+
+.mr--5 {
+  margin-right: 5px;
+}
+
+.mr--10 {
+  margin-right: 10px;
+}
+
+.mr--15 {
+  margin-right: 15px;
+}
+
+.mr--40 {
+  margin-right: 40px;
+}
+
+.p-0 {
+  padding: 0 !important;
+}
+
+.pt--100 {
+  padding-top: 100px;
+}
+
+.pt--70 {
+  padding-top: 70px;
+}
+
+.ptb--60 {
+  padding: 60px 0;
+}
+
+.ptb--70 {
+  padding: 70px 0;
+}
+
+.pb--30 {
+  padding-bottom: 30px;
+}
+
+.pb--100 {
+  padding-bottom: 100px !important;
 }
 
 /************ Default Css ************/
@@ -234,65 +395,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 
-  /************ Detalles Css ************/
-.skill {
-  padding: 0 0 50px 0;
-  position: relative;
-}
-.skill-bx {
-  background: #151515;
-  border-radius: 64px;
-  text-align: center;
-  padding: 60px 50px;
-  margin-top: -60px;
-}
-.skill h2 {
-	font-size: 45px;
-	font-weight: 700;
-  font-size: 55px;
-}
-.skill p {
-    color: #B8B8B8;
-    font-size: 18px;
-    letter-spacing: 0.8px;
-    line-height: 1.5em;
-    margin: 14px 0 75px 0;
-}
-.skill-slider {
-  width: 80%;
-  margin: 0 auto;
-  position: relative;
-}
-.skill-slider .item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start; /* Asegura que los elementos se alineen desde el inicio */
-}
-.skill-slider .item img {
-  width: 50%;
-  margin: 0 auto 15px auto;
-  max-height: 150px; /* Ajusta el tamaño máximo de las imágenes */
-  object-fit: contain; /* Asegura que las imágenes mantengan sus proporciones */
-}
-.background-image-left {
-  top: 28%;
-  position: absolute;
-  bottom: 0;
-  width: 40%;
-  z-index: -4;
-}
-.skill-slider .item h5 {
-  margin-top: 10px; /* Espacio entre la imagen y el texto */
-  height: 50px; /* Altura fija para los encabezados */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 35px;
-  font-family: "Bebas Neue";
-
-}
+x
 
   /************ Equipos Css ************/
 .project {

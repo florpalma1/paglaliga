@@ -1,19 +1,22 @@
 
 import "animate.css";
-import holaa from '../assets/img/holaa.JPG'
-import hola2 from '../assets/img/hola2.JPG'
+import mayoresprimera from '../assets/img/mayoresprimera.png'
+import femmayoresprimera from '../assets/img/femmayoresprimera.png'
+import mayooressegundamasc from '../assets/img/mayooressegundamasc.png'
+import femmayoressegunda from '../assets/img/femmayoressegunda.png'
+import inferioresmasc from '../assets/img/inferioresmasc.png'
+import inferioresfem from '../assets/img/inferioresfem.png'
+import "../css/Equipos.css";
 
 
 /*cambiar las imagenes de las categorias correspondientes*/
 const teamsData = [
-  { number: 1, name: "1era Masculino", imageUrl: holaa },
-  { number: 2, name: "1era Femenino", imageUrl: hola2 },
-  { number: 3, name: "2da Maculino", imageUrl: '//i.lensdump.com/i/AZInIA.jpg' },
-  { number: 4, name: "2da Femenino", imageUrl: '//i.lensdump.com/i/AZInIA.jpg' },
-  { number: 5, name: "Sub 18 Masculino", imageUrl: '//i.lensdump.com/i/AZInIA.jpg' },
-  { number: 6, name: "Sub 18 Femenino", imageUrl: '//i.lensdump.com/i/AZInIA.jpg' },
-  { number: 7, name: "Mixto Competitivo", imageUrl: '//i.lensdump.com/i/AZInIA.jpg' },
-  { number: 8, name: "Mixto Recreativo", imageUrl: '//i.lensdump.com/i/AZInIA.jpg' },
+  { number: 1, name: "1era Masculino", imageUrl: mayoresprimera },
+  { number: 2, name: "1era Femenino", imageUrl: femmayoresprimera },
+  { number: 3, name: "2da Maculino", imageUrl: mayooressegundamasc },
+  { number: 4, name: "2da Femenino", imageUrl: femmayoressegunda },
+  { number: 5, name: "Sub 18 Masculino", imageUrl: inferioresmasc },
+  { number: 6, name: "Sub 18 Femenino", imageUrl: inferioresfem },  
 ];
 
 export const Equipos = () => {

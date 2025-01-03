@@ -4,6 +4,8 @@ import { Banner } from "../components/Banner";
 import { Equipos } from "../components/Equipos";
 import { Detalles } from "../components/Detalles";
 import { Sponsor } from "./Sponsor";
+import { TablaPosiciones } from "./TablaPosiciones";
+import { Aboutus } from "./Aboutus";
 
 export const Home = () => {
   return (
@@ -11,6 +13,8 @@ export const Home = () => {
       <Banner />
       <Detalles />
       <Equipos />
+      <TablaPosiciones />
+      <Aboutus />
       <Sponsor />
     </div>
   );

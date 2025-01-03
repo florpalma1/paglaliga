@@ -5,18 +5,15 @@ import '../Banner.css'; // Asegúrate de tener este archivo CSS con las clases a
 export const Banner = () => {
   const slides = [
     {
-      title: 'MANCHESTER & THE UCL CHAMPION',
-      pretitle: 'WELCOME TO OUR FOOTBALL CLUB',
+      title: 'EL MEJOR VOLEY DEL OESTE',
       imageClass: 'banner-single-1', // Clase para el fondo
     },
     {
-      title: 'ANDERSON & THE WORLD CUP WINNER',
-      pretitle: 'WELCOME TO OUR FOOTBALL CLUB',
+      title: 'TORNEO DE VERANO 2025',
       imageClass: 'banner-single-1_2', // Clase para el fondo
     },
     {
-      title: 'HENDERSON & THE WORLD CUP WINNER',
-      pretitle: 'WELCOME TO OUR FOOTBALL CLUB',
+      title: 'BIENVENIDOS A LA LIGA',
       imageClass: 'banner-single-3', // Clase para el fondo
     },
   ];
@@ -29,14 +26,13 @@ export const Banner = () => {
             <div className={`banner-single ${slide.imageClass} banner-bg`}>
               <div className="container">
                 <div className="banner-content">
-                  <span className="pretitle">{slide.pretitle}</span>
                   <h1 className="banner-heading">{slide.title}</h1>
                   <div className="banner-btn-area">
                     <a href="#0" className="team-btn banner-btn">
-                      OUR TEAM <i className="far fa-long-arrow-right ml--5"></i>
+                      CONTACTO<i className="far fa-long-arrow-right ml--5"></i>
                     </a>
-                    <a href="#0" className="nxt-match-btn banner-btn">
-                      NEXT MATCH <i className="far fa-long-arrow-right ml--5"></i>
+                    <a href="#0" className="team-btn banner-btn">
+                      TORNEO <i className="far fa-long-arrow-right ml--5"></i>
                     </a>
                   </div>
                 </div>

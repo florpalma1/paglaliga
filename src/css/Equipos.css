@@ -1,0 +1,254 @@
+
+  /************ Fonts ************/
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+  .bebas-neue-regular {
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+
+.oswald {
+    font-family: "Oswald", serif;
+    font-optical-sizing: auto;
+  }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    max-width: 85em;
+    margin: 0 auto;
+    padding: 1em;
+  }
+  
+  header a {
+    color: var(--text);
+  }
+  
+  
+  main {
+    position: relative;
+  }
+  
+  .underlay-text {
+    position: absolute;
+    left: 50%;
+    top: 0.85rem;
+    text-transform: uppercase;
+    font-family: Teko;
+    font-size: 20vw;
+    font-weight: 800;
+    letter-spacing: 0;
+    white-space: nowrap;
+    opacity: 0.05;
+    transform: translateX(-50%) translateY(-22.5%) scaleX(0.75) scaleY(1.1);
+    pointer-events: none;
+    overflow: hidden;
+    line-height: 0.65;
+  }
+  
+  .underlay-text span {
+    display: inline-block;
+    position: relative;
+    animation-name: slide-up-text-offset;
+    animation-delay: 0.4s;
+    animation-duration: 1.25s;
+    animation-timing-function: var(--easing);
+    animation-fill-mode: both;
+  }
+  
+  .page-container {
+    font-size: 1rem;
+    max-width: 75em;
+    margin: 6em auto;
+  }
+  
+  .main-title {
+    position: relative;
+    display: inline-block;
+    font-size: 1.35em;
+    text-transform: uppercase;
+    margin-bottom: 3.5em;
+    animation-name: slide-up;
+    animation-duration: 1.25s;
+    animation-timing-function: var(--easing);
+    animation-fill-mode: both;
+  }
+  
+  .main-title::after {
+    content: '';
+    position: absolute;
+    bottom: -1em;
+    left: 0;
+    width: 100%;
+    height: 0.075em;
+    background-color:  #4A2FBD;
+  }
+  
+  .content {
+    position: relative;
+    background-color:  #4A2FBD;
+    color: var(--dark-grey);
+    animation-name: slide-up;
+    animation-delay: 0.15s;
+    animation-duration: 1.25s;
+    animation-timing-function: var(--easing);
+    animation-fill-mode: both;
+  }
+  
+  .grid {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+  }
+  
+  .grid-teams {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
+    grid-template-rows: repeat(2, 1fr); /* Dos filas de igual tamaño */
+    gap: 0; /* Sin espacio entre las tarjetas */
+    width: 100%; /* El contenedor ocupa todo el ancho disponible */
+    height: 160vh; /* El contenedor ocupa todo el alto disponible */
+  }
+
+  /* Para tamaños medianos: dos columnas */
+@media (max-width: 768px) {
+    .grid-teams {
+      grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+      grid-template-rows: auto; /* Número dinámico de filas */
+    }
+  }
+  
+  /* Para tamaños pequeños: una columna */
+  @media (max-width: 480px) {
+    .grid-teams {
+      grid-template-columns: 1fr; /* Una columna */
+      grid-template-rows: auto; /* Número dinámico de filas */
+    }
+  }
+  
+
+  .card {
+    position: relative;
+    display: flex;
+    width: 25%;
+    font-size: 1rem;
+    flex-flow: column;
+    justify-content: center;
+  }
+  
+  .card-team {
+    display: flex;
+    flex-direction: column; /* Organizar contenido dentro de la tarjeta */
+    justify-content: center; /* Centrar contenido verticalmente */
+    align-items: center; /* Centrar contenido horizontalmente */
+    background-color: #fff; /* Color de fondo */
+    border: 1px solid var(--border-grey); /* Opcional, para definir bordes */
+    overflow: hidden; /* Recorta cualquier contenido que exceda los límites */
+    width: 100%; /* Ocupar todo el ancho de la celda */
+    height: 100%; /* Ocupar todo el alto de la celda */
+  }
+  
+  .card-team::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.2em;
+    background-color:  #4A2FBD;
+    transform: scaleX(0.5);
+    animation-name: scalewidth-zero-half;
+    animation-duration: 1.25s;
+    animation-timing-function: var(--easing);
+    animation-fill-mode: both;
+  }
+  
+  .card-team__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-color: var(--bg-blue);
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 0.5em 3em rgba(16,16,30,0.4);
+    opacity: 0;
+    transition: 1s var(--easing);
+    z-index: 1;
+  }
+  
+  .card-team__logo {
+    position: relative;
+    color: var(--grey);
+    margin: 1em 1em 4em;
+    transition: 1s var(--easing);
+    z-index: 1;
+    animation-name: slide-up-fade-in;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.7s;
+  }
+  
+  .card-team__logo .fas {
+    font-size: 3em;
+  }
+  
+  .card-team__number {
+    position: relative;
+    display: inline-block;
+    font-family: "Bebas Neue", serif;
+   color: #4A2FBD;
+    font-size: 50px;
+    margin-bottom: 1em;
+    transform: scaleX(0.7);
+    font-weight: 600;
+    transition: 1s var(--easing);
+    z-index: 1;
+    animation-name: slide-up-fade-in;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.7s;
+  }
+  
+  .card-team__number::after {
+    content: '';
+    position: absolute;
+    bottom: -0.2em;
+    left: 12.5%;
+    width: 75%;
+    height: 0.05em;
+    background-color: #D6DDE0;
+  }
+  
+  .card-team__name {
+    position: relative;
+    text-transform: uppercase;
+    font-family: "Oswald", serif;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    color: var(--dark-grey);
+    transition: 1s var(--easing);
+    z-index: 1;
+    animation-name: slide-up-fade-in;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.7s;
+  }
+  
+  .card-team:hover .card-team__bg {
+    opacity: 1;
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  
+  .card-team:hover .card-team__logo,
+  .card-team:hover .card-team__number,
+  .card-team:hover .card-team__name {
+    color: var(--text);
+  }
+  
