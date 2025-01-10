@@ -1,0 +1,87 @@
+/* Registroequipos.css */
+
+/* Estilo general para el formulario */
+.form-container {
+    max-width: 600px;
+    margin: 150px auto; /* Aquí le damos un margen de 20px en la parte superior */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Título del formulario */
+  .form-container h2 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para los inputs */
+  .form-container .form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Estilo al enfocar un input */
+  .form-container .form-input:focus {
+    border-color: #1dbebe;
+    outline: none;
+  }
+  
+  /* Etiquetas de los campos */
+  .form-container label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  /* Estilo para el botón de envío */
+  .form-container .form-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    background-color: #1dbebe;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Estilo para el botón al pasar el mouse */
+  .form-container .form-button:hover {
+    background-color: #17a7a7;
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .form-container {
+      padding: 15px;
+    }
+    
+    .form-container h2 {
+      font-size: 1.5rem;
+    }
+  
+    .form-container .form-input {
+      font-size: 0.9rem;
+    }
+  
+    .form-container .form-button {
+      font-size: 1rem;
+    }
+  }
+  

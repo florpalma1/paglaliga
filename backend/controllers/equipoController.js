@@ -13,30 +13,23 @@ const obtenerEquipos = async (req, res) => {
 
 // Función para registrar un nuevo equipo
 const registrarEquipo = async (req, res) => {
-    const { titulo, division, genero, jugadores, imagen } = req.body;
+    console.log('Datos recibidos:', req.body);  // Verificar los datos del formulario
+    console.log('Archivo recibido:', req.file); // Verificar si se recibe el archivo
 
     try {
-        // Verificar si los jugadores son un array y procesarlos
-        let jugadoresArray = Array.isArray(jugadores) ? jugadores : [jugadores];
-
-        // Crear un nuevo documento de equipo
         const nuevoEquipo = new Equipo({
-            titulo,
-            imagen,
-            division,
-            genero,
-            jugadores: jugadoresArray,
+            titulo: req.body.titulo,
+            categoria: req.body.categoria,
+            imagen: req.file ? `/uploads/${req.file.filename}` : null,  // URL de la imagen
         });
 
-        // Guardar el nuevo equipo en la base de datos
         await nuevoEquipo.save();
-        res.status(201).json(nuevoEquipo); // Devolver el equipo recién creado
+        res.status(201).json(nuevoEquipo); // Responder con el equipo creado
     } catch (error) {
         console.error('Error al registrar el equipo:', error);
         res.status(500).json({ message: 'Error al registrar el equipo', error: error.message });
     }
 };
-
 // Exportar las funciones del controller
 module.exports = {
     obtenerEquipos,

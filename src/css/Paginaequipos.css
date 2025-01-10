@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+ 
+.contentPagEquipos {
+    position: relative;
+    background-color:  #121212;
+    color: var(--dark-grey);
+    animation-name: slide-up;
+    animation-delay: 0.15s;
+    animation-duration: 1.25s;
+    animation-timing-function: var(--easing);
+    animation-fill-mode: both;
+  }
+
+.section-gap {
+    padding: 120px 0;
+  }
+  .container {
+    max-width: 1240px; /* 1 */
+    margin-left: auto; /* 2 */
+    margin-right: auto; /* 2 */
+    padding-left: 20px; /* 3 */
+    padding-right: 20px; /* 3 */
+    width: 100%; /* 1 */
+  }
+.rts-team-section {
+    margin-bottom: -50px;
+  }
+  .rts-team-section .player-single {
+    margin-bottom: 50px;
+  }
+  .rts-team-section .player-single:hover .player-picture img {
+    -webkit-transform: scale(110%);
+            transform: scale(110%);
+  }
+  .rts-team-section .player-single .player-picture {
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .rts-team-section .player-single .player-picture img {
+    width: 100%;
+  }
+  .rts-team-section .player-single .content {
+    padding-top: 30px;
+  }
+  .rts-team-section .player-single .player-name {
+    font-size: 24px;
+    letter-spacing: -1px;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 3px;
+    text-decoration: none;
+    font-family: "Oswald", serif;
+  }
+  .rts-team-section .player-single .player-name:hover {
+    color: var(--theme-color);
+  }
+  .rts-team-section .player-single .player-role {
+    display: block;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color:  #1dbebe;
+    font-weight: 600;
+    font-family: "Oswald", serif;
+  }
+  @media (max-width: 768px) {
+    .rts-team-section .player-single {
+      margin-bottom: 25px;
+    }
+    .rts-team-section .player-single .content {
+      padding-top: 10px;
+    }
+  }
+
+/* Filtros */
+.filters-container {
+  margin-top: 60px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 50px;
+}
+
+.filters-wrapper {
+  position: relative;
+  width: fit-content;
+}
+
+.filter-tabs {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+}
+
+.filter-button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: relative;
+  color: #0a0a0a;
+  font-family: "Montserrat", sans-serif;
+  transition: color 0.3s;
+}
+
+.filter-button:hover,
+.filter-active {
+  transition: color 0.4s ease-in-out;
+  color:  #3839fa ;
+}
+
+.filter-slider {
+  pointer-events: none;
+  position: absolute;
+  padding: 0.3rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+

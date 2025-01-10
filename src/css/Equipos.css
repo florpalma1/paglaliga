@@ -10,6 +10,10 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
 
+  :root {
+    --easing: cubic-bezier(.8,0,.2,1);
+  }
+
 .oswald {
     font-family: "Oswald", serif;
     font-optical-sizing: auto;
@@ -110,7 +114,7 @@ header {
     grid-template-rows: repeat(2, 1fr); /* Dos filas de igual tamaño */
     gap: 0; /* Sin espacio entre las tarjetas */
     width: 100%; /* El contenedor ocupa todo el ancho disponible */
-    height: 160vh; /* El contenedor ocupa todo el alto disponible */
+    height: 130vh; /* El contenedor ocupa todo el alto disponible */
   }
 
   /* Para tamaños medianos: dos columnas */
@@ -223,6 +227,7 @@ header {
     width: 75%;
     height: 0.05em;
     background-color: #D6DDE0;
+    color: #D6DDE0;
   }
   
   .card-team__name {
@@ -239,16 +244,29 @@ header {
     animation-delay: 1s;
     animation-timing-function: ease-in-out;
     animation-duration: 0.7s;
+    
   }
   
   .card-team:hover .card-team__bg {
     opacity: 1;
     transform: scale3d(1.1, 1.1, 1.1);
+    color: #D6DDE0;
   }
   
   .card-team:hover .card-team__logo,
   .card-team:hover .card-team__number,
   .card-team:hover .card-team__name {
-    color: var(--text);
+    color: #D6DDE0;
   }
   
+
+
+
+
+
+
+
+
+
+
+

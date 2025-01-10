@@ -14,7 +14,7 @@ const storage = multer.diskStorage({
     },
 });
 
-const upload = multer({ storage });
+const upload = multer({ storage: storage });
 
 // Ruta GET: Obtener equipos
 router.get('/', equipoController.obtenerEquipos);
