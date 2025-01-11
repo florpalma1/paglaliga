@@ -11,7 +11,7 @@ export const Paginaequipos = () => {
     "1RA MASCULINO",
     "2DA FEMENINO",
     "2DA MASCULINO",
-    "SUB 18 MASCUINO",
+    "SUB 18 MASCULINO",
     "SUB 18 FEMENINO",
   ];
 
@@ -38,7 +38,7 @@ export const Paginaequipos = () => {
   const filteredTeams =
     activeFilter === "ALL"
       ? teams
-      : teams.filter((team) => team.category === activeFilter);
+      : teams.filter((team) => team.division === activeFilter);
 
   return (
     <div className="rts-team-section section-gap">

@@ -1,96 +1,76 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import '../css/Tablaposiciones.css';
+import axios from 'axios'; // Importamos Axios
 
 export const TablaPosiciones = () => {
-    const categorias = [
-        '1RA MASCULINO',
-        '1RA FEMENINO',
-        '2DA MASCULINO',
-        '2DA FEMENINO',
-        'SUB 18 MASCULINO',
-        'SUB 18 FEMENINO',
-    ];
+    const [equipos, setEquipos] = useState([]); // Estado para los equipos
+    const [categorias, setCategorias] = useState([
+        '1RA MASCULINO ZONA A',
+        '1RA MASCULINO ZONA B',
+        '1RA FEMENINO ZONA A',
+        '1RA FEMENINO ZONA B',
+        '2DA MASCULINO ZONA A',
+        '2DA MASCULINO ZONA B',
+        '2DA MASCULINO ZONA C',
+        '2DA MASCULINO ZONA D',
+        '2DA FEMENINO ZONA A',
+        '2DA FEMENINO ZONA B',
+        '2DA FEMENINO ZONA C',
+        '2DA FEMENINO ZONA D',
+        'SUB 18 MASCULINO ZONA A',
+        'SUB 18 MASCULINO ZONA B',
+        'SUB 18 FEMENINO ZONA A',
+        'SUB 18 FEMENINO ZONA B',
+    ]);
 
-    const renderTable = () => (
-        <table className="table table-bordered">
-            <thead className="thead-dark">
-                <tr className="head-tr">
-                    <th scope="col">POSITION</th>
-                    <th scope="col">CLUB NAME</th>
-                    <th scope="col">MATCH</th>
-                    <th scope="col">WIN</th>
-                    <th scope="col">DRAW</th>
-                    <th scope="col">LOSE</th>
-                    <th scope="col">DUE</th>
-                    <th scope="col">PTS</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><span className="position-number">01</span></td>
-                    <td><h4 className="player-name">Sportius F.C.</h4></td>
-                    <td>39</td>
-                    <td>30</td>
-                    <td>02</td>
-                    <td>01</td>
-                    <td>03</td>
-                    <td>60</td>
-                </tr>
-                <tr>
-                    <td><span className="position-number">02</span></td>
-                    <td><h4 className="player-name">Romada Football Club</h4></td>
-                    <td>27</td>
-                    <td>10</td>
-                    <td>02</td>
-                    <td>01</td>
-                    <td>03</td>
-                    <td>56</td>
-                </tr>
-                <tr>
-                    <td><span className="position-number">03</span></td>
-                    <td><h4 className="player-name">Holonso F.C.</h4></td>
-                    <td>24</td>
-                    <td>35</td>
-                    <td>02</td>
-                    <td>01</td>
-                    <td>03</td>
-                    <td>46</td>
-                </tr>
-                <tr>
-                    <td><span className="position-number">04</span></td>
-                    <td><h4 className="player-name">Real Madrid</h4></td>
-                    <td>25</td>
-                    <td>19</td>
-                    <td>02</td>
-                    <td>01</td>
-                    <td>03</td>
-                    <td>58</td>
-                </tr>
-                <tr>
-                    <td><span className="position-number">05</span></td>
-                    <td><h4 className="player-name">Barcelona F.C.</h4></td>
-                    <td>19</td>
-                    <td>25</td>
-                    <td>02</td>
-                    <td>01</td>
-                    <td>03</td>
-                    <td>47</td>
-                </tr>
-                <tr>
-                    <td><span className="position-number">06</span></td>
-                    <td><h4 className="player-name">Chelsea</h4></td>
-                    <td>10</td>
-                    <td>23</td>
-                    <td>02</td>
-                    <td>01</td>
-                    <td>03</td>
-                    <td>-10</td>
-                </tr>
-            </tbody>
-        </table>
-    );
+    // Función para obtener los equipos desde el backend
+    useEffect(() => {
+        const fetchEquipos = async () => {
+            try {
+                const response = await axios.get('http://localhost:5000/torneoVoley/equipos');
+                setEquipos(response.data); // Guardamos los equipos en el estado
+            } catch (error) {
+                console.error('Error al obtener los equipos:', error);
+            }
+        };
+
+        fetchEquipos(); // Llamamos a la función para cargar los equipos
+    }, []);
+
+    const renderTable = (categoria) => {
+        // Filtramos los equipos por categoría
+        const equiposPorCategoria = equipos.filter(equipo => equipo.category === categoria);
+        
+        return (
+            <table className="table table-bordered">
+                <thead className="thead-dark">
+                    <tr className="head-tr">
+                        <th scope="col">POSICION</th>
+                        <th scope="col">EQUIPO</th>
+                        <th scope="col">PUNTOS</th>
+                        <th scope="col">PJ</th>
+                        <th scope="col">PG</th>
+                        <th scope="col">PP</th>                     
+                    </tr>
+                </thead>
+                <tbody>
+                    {equiposPorCategoria.map((equipo, index) => (
+                        <tr key={equipo._id}>
+                            <td><span className="position-number">{index + 1}</span></td>
+                            <td><h4 className="player-name">{equipo.title}</h4></td> {/* Mostramos el nombre del equipo */}
+                            <td>0</td> {/* Aquí puedes agregar más estadísticas según tu modelo */}
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                                       {/* Aquí también */}
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        );
+    };
 
     return (
         <div className="rts-point-table-section section-gap">
@@ -125,7 +105,7 @@ export const TablaPosiciones = () => {
                             <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
                                 <h3 className="categoria-titulo text-center mb-4">{categoria}</h3>
                                 <div className="table-area table-full">
-                                    {renderTable()}
+                                    {renderTable(categoria)} {/* Renderizamos la tabla por categoría */}
                                 </div>
                             </div>
                         ))}
@@ -152,11 +132,10 @@ export const TablaPosiciones = () => {
                 </div>
 
                 <div className="button-area mt-4">
-                    <a href="score.html" className="btn btn-primary full-table-btn">VIEW FULL TABLE</a>
+                    {/*pedir a lau link de las tablas completas*/}
+                    <a href="score.html" className="btn btn-primary full-table-btn">VER TABLAS COMPLETAS</a>
                 </div>
             </div>
         </div>
     );
 };
-
-

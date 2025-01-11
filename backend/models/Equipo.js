@@ -13,6 +13,10 @@ const equipoSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  division: {
+    type: String,
+    required: true,
+  },
 });
 
 const Equipo = mongoose.model('Equipo', equipoSchema);

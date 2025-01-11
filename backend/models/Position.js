@@ -1,16 +1,16 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-const PositionSchema = new mongoose.Schema({
-  category: { type: String, required: true }, // Categoría (A, B, etc.)
+const positionSchema = new mongoose.Schema({
+  category: { type: String, required: true }, // Categoría (ej. 'A', 'B', etc.)
   teams: [
     {
-      teamId: { type: mongoose.Schema.Types.ObjectId, ref: 'Team', required: true }, // ID del equipo
-      points: { type: Number, default: 0 }, // Puntos totales
+      teamId: { type: mongoose.Schema.Types.ObjectId, ref: "Team" }, // ID del equipo
+      points: { type: Number, default: 0 }, // Puntos del equipo en la tabla
+      wins: { type: Number, default: 0 }, // Victorias del equipo
+      losses: { type: Number, default: 0 }, // Derrotas del equipo
       matchesPlayed: { type: Number, default: 0 }, // Partidos jugados
-      wins: { type: Number, default: 0 }, // Partidos ganados
-      losses: { type: Number, default: 0 } // Partidos perdidos
-    }
-  ]
+    },
+  ],
 });
 
-module.exports = mongoose.model('Position', PositionSchema);
+module.exports = mongoose.model("Position", positionSchema);
