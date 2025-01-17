@@ -1,7 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const equipoRoutes = require('./routes/equipos'); // Ruta de equipos
-const resultadoRoutes = require('./routes/resultadoRoutes'); // Ruta de resultados
 const cors = require('cors');
 
 const app = express();
@@ -25,7 +24,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Configuración de las rutas
 app.use('/torneoVoley/equipos', equipoRoutes); // Rutas de equipos
-app.use('/torneoVoley/resultados', resultadoRoutes); // Rutas de resultados
+
 
 // Conexión a la base de datos MongoDB
 const connectToDatabase = async () => {

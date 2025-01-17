@@ -1,0 +1,190 @@
+
+
+.containergaleria {
+  min-height: 100vh;
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 0 2rem 2rem;
+}
+
+.container {
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 0 2rem 2rem;
+}
+
+/* Título */
+.heading {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  padding: 3.5rem 0;
+  color: #1a1a1a;
+}
+
+.heading span {
+  display: block;
+}
+
+/* Galería */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -1rem -1rem;
+}
+
+.gallery-item {
+  flex: 1 0 24rem;
+  margin: 1rem;
+  box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.gallery-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 400ms ease-out;
+}
+
+.gallery-image:hover {
+  transform: scale(1.15);
+}
+
+/* Soporte Grid */
+@supports (display: grid) {
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    grid-gap: 2rem;
+  }
+
+  .gallery,
+  .gallery-item {
+    margin: 0;
+  }
+}
+
+/* Botones personalizados */
+.custom-button {
+  font-weight: 700;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 18px 34px;
+  margin-top: 20px;
+  font-size: 18px;
+  margin-left: 18px;
+  position: relative;
+  background-color: transparent;
+  transition: 0.3s ease-in-out;
+}
+
+.custom-button::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  background-color: #fff;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
+}
+
+.custom-button:hover {
+  color: #121212;
+}
+
+.custom-button:hover::before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+/* Banner */
+.gallery-banner {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background-image: url('./../assets/img/bannerpaginicio.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 50px;
+}
+
+.gallery-banner::after {
+  content: "";
+  mix-blend-mode: multiply;
+  background: #0a15ed;
+  opacity: 90%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-banner__content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  padding: 0 2rem;
+}
+
+.gallery-banner__title {
+  font-size: 155px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+  font-family: 'Oswald', 'serif';
+  margin: 0 0 30px;
+}
+
+/* Grupo de botones */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap; /* Asegura que se ajusten en pantallas pequeñas */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .gallery-item {
+    flex: 1 0 100%;
+  }
+
+  .gallery-banner__title {
+    font-size: 50px;
+  }
+
+  .custom-button {
+    font-size: 16px;
+    padding: 14px 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-banner {
+    height: 40vh;
+  }
+
+  .gallery-banner__title {
+    font-size: 35px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

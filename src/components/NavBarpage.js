@@ -50,7 +50,7 @@ export const NavBar = () => {
               Equipos
             </Nav.Link>
             <Nav.Link as={Link} to="/Torneo" className="active navbar-link">
-              Torneo
+              Galeria
             </Nav.Link>
           </Nav>
           <span className="navbar-text">

@@ -13,7 +13,7 @@ export const Detalles = () => {
 
     useEffect(() => {
         // Fecha objetivo del countdown
-        const targetDate = new Date("2025-01-11T00:00:00").getTime();
+        const targetDate = new Date("2025-03-15T00:00:00").getTime();
 
         // Función para calcular el tiempo restante
         const updateCountdown = () => {
@@ -54,14 +54,14 @@ export const Detalles = () => {
                                 VERANO
                             </h3>
                         </div>
-                        <span className="match-type">APERTURA</span>
+                        <span className="match-type">NUEVOS CAMPEONES</span>
                     </div>
                     <div className="match-countdown-area">
                         <div className="countdown">
                             <div className="countdown-el days-c">
                                 <span className="value" id="days">{timeLeft.days}</span>
                             </div>
-                            <span className="letter">D</span>
+                            <span className="letter ms-2">D</span>
                             <div className="countdown-el hours-c">
                                 <span className="value" id="hours">{timeLeft.hours}</span>
                             </div>
@@ -69,11 +69,11 @@ export const Detalles = () => {
                             <div className="countdown-el mins-c">
                                 <span className="value" id="mins">{timeLeft.minutes}</span>
                             </div>
-                            <span className="letter">M</span>
+                            <span className="letter ms-2">M</span>
                             <div className="countdown-el seconds-c">
                                 <span className="value" id="seconds">{timeLeft.seconds}</span>
                             </div>
-                            <span className="letter">S</span>
+                            <span className="letter ms-2">S</span>
                         </div>
                     </div>
                     <a href="contact.html" className="ticket-btn">VER MAS</a>

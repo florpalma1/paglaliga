@@ -15,21 +15,17 @@ export const Aboutus = () => {
               <span className="pretitle">NOSOTROS</span>CONOCE LA LIGA
             </h1>
             <p>
-              It is one of the most popular football clubs that offer training programs
-              for the youth, as well as summer camps.
+              Desde el año 2020 La Liga organiza torneos de voley en la zona oeste de la provincia de Buenos Aires
             </p>
           </div>
           <div className="quote-box">
             <p>
-              Sportius United has a long and exciting history that started three
-              decades ago for move forward.
+            "Nuestro objetivo es hacer crecer el voley de oeste"
             </p>
-            <span className="quote-author">ALONSO D. DOWSON</span>
+            <span className="quote-author">LAURA ACOSTA, ORGANIZADORA</span>
           </div>
           <p>
-            Sportius United has a long and exciting history that started 3 decades ago.
-            It is one of the most popular football clubs that offer training programs
-            for the youth, as well as summer camps.
+            Con mas de 12 torneos a lo largo de los ultimos años, la liga 
           </p>
           <a href="about.html" className="more-btn">
             LEARN MORE <i className="long-arrow-right ml--10"></i>
