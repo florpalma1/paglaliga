@@ -1,0 +1,7 @@
+.list-group-item {
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+  }
+  .list-group-item img {
+    border-radius: 50%;
+  }

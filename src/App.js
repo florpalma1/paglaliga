@@ -5,6 +5,7 @@ import { Paginaequipos } from "./components/pages/Paginaequipos";
 import { Torneo } from "./components/Torneo";
 import { Footer } from "./components/Footer";
 import { Home } from "./components/Home";
+import { Staff } from './components/pages/Staff';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Home />} /> {/* Ruta principal (Home) */}
           <Route path="/PaginaEquipos" element={<Paginaequipos />} />
           <Route path="/Torneo" element={<Torneo />} />
+          <Route path="/Staff" element={<Staff />} />
         </Routes>
         <Footer />
       </div>

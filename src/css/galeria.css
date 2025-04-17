@@ -188,3 +188,56 @@
     gap: 1rem;
   }
 }
+
+/**************************************************/
+/* Contenedor principal de la galería */
+.gallery {
+  display: flex;
+  flex-wrap: wrap; /* Ajusta automáticamente los elementos al ancho disponible */
+  gap: 20px; /* Espacio entre los ítems de la galería */
+  justify-content: center; /* Centra las imágenes horizontalmente */
+}
+
+/* Cada ítem de la galería */
+.gallery-item {
+  text-align: center; /* Centra el contenido dentro del ítem */
+  width: 200px; /* Tamaño fijo para cada ítem */
+}
+
+/* Imagen de la galería */
+.gallery-image {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  border-radius: 8px; /* Bordes redondeados para las imágenes */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Contenido debajo de cada imagen */
+.gallery-item-content {
+  margin-top: 10px; /* Espacio entre la imagen y el contenido */
+}
+
+/* Título debajo de la imagen */
+.gallery-title {
+  font-size: 16px; /* Tamaño del texto del título */
+  font-weight: bold; /* Hace el texto más llamativo */
+  color: #333; /* Color del texto */
+  margin: 5px 0; /* Margen superior e inferior */
+}
+
+/* Botón debajo de cada título */
+.gallery-button {
+  background-color: #007bff; /* Color de fondo del botón */
+  color: #fff; /* Color del texto */
+  border: none; /* Sin bordes */
+  padding: 8px 12px; /* Espaciado interno */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  font-size: 14px; /* Tamaño del texto */
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Efecto hover en el botón */
+.gallery-button:hover {
+  background-color: #0056b3; /* Color más oscuro al pasar el mouse */
+}
+

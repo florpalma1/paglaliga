@@ -41,7 +41,13 @@ export const Paginaequipos = () => {
       : teams.filter((team) => team.division === activeFilter);
 
   return (
-    <div className="rts-team-section section-gap">
+    <div>
+        <div className="gallery-banner">
+        <div className="gallery-banner__content">
+          <h1 className="gallery-banner__title">EQUIPOS</h1>
+        </div>
+      </div>
+<div className="rts-team-section">
       <div className="container">
         {/* Filtros */}
         <div className="filters-container">
@@ -91,5 +97,7 @@ export const Paginaequipos = () => {
         </Row>
       </div>
     </div>
+    </div>
+    
   );
 };

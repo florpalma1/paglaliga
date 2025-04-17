@@ -11,9 +11,7 @@
     animation-fill-mode: both;
   }
 
-.section-gap {
-    padding: 120px 0;
-  }
+
   .container {
     max-width: 1240px; /* 1 */
     margin-left: auto; /* 2 */
@@ -74,7 +72,6 @@
 
 /* Filtros */
 .filters-container {
-  margin-top: 60px;
   margin-bottom: 40px;
   display: flex;
   justify-content: center;

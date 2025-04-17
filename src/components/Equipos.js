@@ -1,22 +1,22 @@
 
 import "animate.css";
-import mayoresprimera from '../assets/img/mayoresprimera.png'
-import femmayoresprimera from '../assets/img/femmayoresprimera.png'
-import mayooressegundamasc from '../assets/img/mayooressegundamasc.png'
-import femmayoressegunda from '../assets/img/femmayoressegunda.png'
-import inferioresmasc from '../assets/img/inferioresmasc.png'
-import inferioresfem from '../assets/img/inferioresfem.png'
+import galeriauno from '../assets/img/galeriauno.jpg'
+import galeriados from '../assets/img/galeriados.jpg'
+import galeriasiete from '../assets/img/galeriasiete.jpg'
+import galeriacuatro from '../assets/img/galeriacuatro.jpg'
+import galeriacinco from '../assets/img/galeriacinco.jpg'
+import galeriaocho from '../assets/img/galeriaocho.jpg'
 import "../css/Equipos.css";
 
 
 /*cambiar las imagenes de las categorias correspondientes*/
 const teamsData = [
-  { number: 1, name: "1era Masculino", imageUrl: mayoresprimera },
-  { number: 2, name: "1era Femenino", imageUrl: femmayoresprimera },
-  { number: 3, name: "2da Maculino", imageUrl: mayooressegundamasc },
-  { number: 4, name: "2da Femenino", imageUrl: femmayoressegunda },
-  { number: 5, name: "Sub 18 Masculino", imageUrl: inferioresmasc },
-  { number: 6, name: "Sub 18 Femenino", imageUrl: inferioresfem },  
+  { number: 1, name: "1era Masculino", imageUrl: galeriacuatro },
+  { number: 2, name: "1era Femenino", imageUrl: galeriaocho },
+  { number: 3, name: "2da Maculino", imageUrl: galeriacinco },
+  { number: 4, name: "2da Femenino", imageUrl: galeriados },
+  { number: 5, name: "Sub 18 Masculino", imageUrl: galeriauno },
+  { number: 6, name: "Sub 18 Femenino", imageUrl: galeriasiete },  
 ];
 
 export const Equipos = () => {

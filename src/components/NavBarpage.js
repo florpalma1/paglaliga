@@ -52,6 +52,9 @@ export const NavBar = () => {
             <Nav.Link as={Link} to="/Torneo" className="active navbar-link">
               Galeria
             </Nav.Link>
+            <Nav.Link as={Link} to="/Staff" className="active navbar-link">
+              Staff
+            </Nav.Link>
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
