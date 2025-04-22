@@ -19,7 +19,7 @@ export const Home = () => {
       <Equipos />
       <TablaPosiciones />
       <Torneos />
-      <UltimosResultados />
+      {/*<UltimosResultados />*/}
       <Aboutus />
       <Sponsor />
     </div>

@@ -111,4 +111,3 @@ export const UltimosResultados = () => {
     );
 };
 
-export default UltimosResultados;
