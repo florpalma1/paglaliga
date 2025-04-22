@@ -110,7 +110,7 @@ header {
   
   .grid-teams {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
+    grid-template-columns: repeat(4, 1fr); /* Tres columnas de igual tamaño */
     grid-template-rows: repeat(2, 1fr); /* Dos filas de igual tamaño */
     gap: 0; /* Sin espacio entre las tarjetas */
     width: 100%; /* El contenedor ocupa todo el ancho disponible */

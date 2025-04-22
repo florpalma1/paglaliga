@@ -4,7 +4,8 @@ import authaedo from '../assets/img/authaedo.png'
 import calcos from '../assets/img/calcos.png'
 import nutri from '../assets/img/nutri.png'
 import thorium from '../assets/img/thorium.png'
-
+import MILANESA from '../assets/img/MILANESA.png'
+import SCUM from '../assets/img/SCUM.png'
 
 export const Sponsor = () => {
   return (
@@ -29,6 +30,16 @@ export const Sponsor = () => {
           <div className="col-xl-2 col-md-4 col-sm-6 sponsor-container">
             <a href="https://www.instagram.com/latiendadecalcos/" className="sponsor-single">
               <img src={calcos} alt="Tienda de calcos" />
+            </a>
+          </div>
+          <div className="col-xl-2 col-md-4 col-sm-6 sponsor-container">
+            <a href="https://www.instagram.com/latiendadecalcos/" className="sponsor-single">
+              <img src={SCUM} alt="Tienda de calcos" />
+            </a>
+          </div>
+          <div className="col-xl-2 col-md-4 col-sm-6 sponsor-container">
+            <a href="https://www.instagram.com/latiendadecalcos/" className="sponsor-single">
+              <img src={MILANESA} alt="Tienda de calcos" />
             </a>
           </div>
           <div className="col-xl-2 col-md-4 col-sm-6 sponsor-container">

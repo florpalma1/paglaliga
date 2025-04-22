@@ -51,6 +51,7 @@ export const Galeria = () => {
           ))}
         </div>
         <div className="button-group">
+          
           <button className="custom-button">DRIVE DE FOTOS</button>
           <button className="custom-button"><i class="bi bi-camera"></i> <span />@ENZOPEDROZOPH</button>
           <button className="custom-button"><i class="bi bi-camera"></i> <span />@MOREBAUDINO</button>

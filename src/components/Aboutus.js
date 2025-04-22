@@ -25,8 +25,8 @@ export const Aboutus = () => {
             <span className="quote-author">LAURA ACOSTA, ORGANIZADORA</span>
           </div>
           <p>
-            Con mas de 12 torneos a lo largo de los ultimos años, la liga 
-          </p>
+  Con más de 12 torneos a lo largo de los últimos años, la liga se ha consolidado como un espacio clave para el desarrollo del voley en la región.
+</p>
           <a href="about.html" className="more-btn">
             LEARN MORE <i className="long-arrow-right ml--10"></i>
           </a>

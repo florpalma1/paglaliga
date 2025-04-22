@@ -15,9 +15,8 @@ export const Footer = () => {
                   <img src={laligalogo} alt="footer-logo" />
                 </div>
                 <p className="footer-text">
-                  It was the end of a period in the 1980s in which it seemed
-                  like every NBA Finals matchup featured the Celtics sports
-                  club.
+                 Bienvenidos a La Liga, donde el voley se vive con pasion. <br />
+                 La Liga mas grande del oeste.
                 </p>
                 <div className="social-links">
                   <a href="#0" className="platform">
@@ -47,9 +46,6 @@ export const Footer = () => {
                  
                   <li className="widget-list-item">
                     <a href="contact.html">CONTACTO</a>
-                  </li>
-                  <li className="widget-list-item">
-                    <a href="blog.html">NOTICIAS</a>
                   </li>
                   <li className="widget-list-item">
                     <a href="team.html">EQUIPOS</a>

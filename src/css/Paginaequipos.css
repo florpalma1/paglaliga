@@ -123,3 +123,52 @@
   z-index: 0;
 }
 
+
+.list-group-item {
+  background-color: #fff;
+  border: 1px solid #eee;
+}
+
+.btn-sm {
+  min-width: 32px;
+  padding: 4px 8px;
+}
+
+
+/*****************************/
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.team-card {
+  flex: 0 1 calc(20% - 20px); /* 5 cards por fila */
+  max-width: calc(20% - 20px);
+}
+
+/* Responsivo */
+@media (max-width: 1200px) {
+  .team-card {
+    flex: 0 1 calc(25% - 20px); /* 4 por fila */
+  }
+}
+
+@media (max-width: 992px) {
+  .team-card {
+    flex: 0 1 calc(33.333% - 20px); /* 3 por fila */
+  }
+}
+
+@media (max-width: 768px) {
+  .team-card {
+    flex: 0 1 calc(50% - 20px); /* 2 por fila */
+  }
+}
+
+@media (max-width: 480px) {
+  .team-card {
+    flex: 0 1 100%; /* 1 por fila */
+  }
+}

@@ -13,7 +13,7 @@ export const Detalles = () => {
 
     useEffect(() => {
         // Fecha objetivo del countdown
-        const targetDate = new Date("2025-03-15T00:00:00").getTime();
+        const targetDate = new Date("2026-01-15T00:00:00").getTime();
 
         // Función para calcular el tiempo restante
         const updateCountdown = () => {
@@ -54,7 +54,7 @@ export const Detalles = () => {
                                 VERANO
                             </h3>
                         </div>
-                        <span className="match-type">NUEVOS CAMPEONES</span>
+                        <span className="match-type">EDICION 2026</span>
                     </div>
                     <div className="match-countdown-area">
                         <div className="countdown">
@@ -62,7 +62,7 @@ export const Detalles = () => {
                                 <span className="value" id="days">{timeLeft.days}</span>
                             </div>
                             <span className="letter ms-2">D</span>
-                            <div className="countdown-el hours-c">
+                           <div className="countdown-el hours-c">
                                 <span className="value" id="hours">{timeLeft.hours}</span>
                             </div>
                             <span className="letter">H</span>

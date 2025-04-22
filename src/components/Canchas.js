@@ -3,6 +3,7 @@ import '../sponsor.css';
 import cadm from '../assets/img/cadm.png'
 import diecisietevoley from '../assets/img/diecisietevoley.png'
 import porte from '../assets/img/porte.png'
+import clubmoron from '../assets/img/clubmoron.png'
 
 
 export const Canchas = () => {
@@ -28,6 +29,11 @@ export const Canchas = () => {
           <div className="col-xl-2 col-md-4 col-sm-6 sponsor-container">
             <a href="https://www.instagram.com/latiendadecalcos/" className="sponsor-single">
               <img src={porte} alt="Tienda de calcos" />
+            </a>
+          </div>
+          <div className="col-xl-2 col-md-4 col-sm-6 sponsor-container">
+            <a href="https://www.instagram.com/latiendadecalcos/" className="sponsor-single">
+              <img src={clubmoron} alt="Tienda de calcos" />
             </a>
           </div>
         </div>

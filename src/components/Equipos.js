@@ -6,25 +6,26 @@ import galeriasiete from '../assets/img/galeriasiete.jpg'
 import galeriacuatro from '../assets/img/galeriacuatro.jpg'
 import galeriacinco from '../assets/img/galeriacinco.jpg'
 import galeriaocho from '../assets/img/galeriaocho.jpg'
+import galeriaprom from '../assets/img/galeriaprom.JPG'
+import todosequipos from '../assets/img/todosequipos.JPG'
 import "../css/Equipos.css";
 
 
-/*cambiar las imagenes de las categorias correspondientes*/
+/*agregar los links que me van a redirigir a cada categoria*/
 const teamsData = [
   { number: 1, name: "1era Masculino", imageUrl: galeriacuatro },
   { number: 2, name: "1era Femenino", imageUrl: galeriaocho },
   { number: 3, name: "2da Maculino", imageUrl: galeriacinco },
   { number: 4, name: "2da Femenino", imageUrl: galeriados },
-  { number: 5, name: "Sub 18 Masculino", imageUrl: galeriauno },
-  { number: 6, name: "Sub 18 Femenino", imageUrl: galeriasiete },  
+  { number: 5, name: "Inferiores Masculino", imageUrl: galeriauno },
+  { number: 6, name: "Inferiores Femenino", imageUrl: galeriasiete },  
+  { number: 6, name: "Promocional Damas", imageUrl: galeriaprom },
+  { number: 6, name: "Ver todos", imageUrl: todosequipos },
 ];
 
 export const Equipos = () => {
   return (
     <>
-
-
-      {/* Main Content */}
       <main>
         <div className="underlay-text">
           <span>TDV EQUIPOS 2025</span>
@@ -44,7 +45,7 @@ export const Equipos = () => {
                   <i className="fas fa-football-ball"></i>
                 </div>
                 <div className="card-team__number">{team.number}</div>
-                <div className="card-team__name">{team.name}</div>
+                <div className="card-team__name ms-3">{team.name}</div>
               </div>
             ))}
           </div>

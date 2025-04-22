@@ -32,7 +32,7 @@ export const Banner = () => {
                       CONTACTO<i className="far fa-long-arrow-right ml--5"></i>
                     </a>
                     <a href="#0" className="team-btn banner-btn">
-                      TORNEO <i className="far fa-long-arrow-right ml--5"></i>
+                      TORNEOS <i className="far fa-long-arrow-right ml--5"></i>
                     </a>
                   </div>
                 </div>
