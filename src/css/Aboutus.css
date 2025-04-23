@@ -131,3 +131,9 @@
         max-width: 100%;
     }
 }
+
+@media (max-width: 480px) {
+  .rts-about-section .about-inner .contents .section-title-area .pretitle {
+    font-size: 60px;
+  }
+}

@@ -13,14 +13,14 @@ import "../css/Equipos.css";
 
 /*agregar los links que me van a redirigir a cada categoria*/
 const teamsData = [
-  { number: 1, name: "1era Masculino", imageUrl: galeriacuatro },
-  { number: 2, name: "1era Femenino", imageUrl: galeriaocho },
-  { number: 3, name: "2da Maculino", imageUrl: galeriacinco },
-  { number: 4, name: "2da Femenino", imageUrl: galeriados },
-  { number: 5, name: "Inferiores Masculino", imageUrl: galeriauno },
-  { number: 6, name: "Inferiores Femenino", imageUrl: galeriasiete },  
-  { number: 6, name: "Promocional Damas", imageUrl: galeriaprom },
-  { number: 6, name: "Ver todos", imageUrl: todosequipos },
+  {  name: "1era Masculino", imageUrl: galeriacuatro },
+  {  name: "1era Femenino", imageUrl: galeriaocho },
+  {  name: "2da Maculino", imageUrl: galeriacinco },
+  {  name: "2da Femenino", imageUrl: galeriados },
+  {  name: "Inferiores Masculino", imageUrl: galeriauno },
+  {  name: "Inferiores Femenino", imageUrl: galeriasiete },  
+  {  name: "3ra Damas", imageUrl: galeriaprom },
+  { name: "Ver todos", imageUrl: todosequipos },
 ];
 
 export const Equipos = () => {
@@ -39,14 +39,13 @@ export const Equipos = () => {
           
           <div className="content grid grid-teams">
             {teamsData.map(team => (
-              <div className="card card-team" key={team.number}>
-                <div className="card-team__bg" style={{ backgroundImage: `url(${team.imageUrl})` }}></div>
-                <div className="card-team__logo">
-                  <i className="fas fa-football-ball"></i>
-                </div>
-                <div className="card-team__number">{team.number}</div>
-                <div className="card-team__name ms-3">{team.name}</div>
-              </div>
+    <div className="card card-team" key={`${team.name}`}>
+    <div className="card-team__bg" style={{ backgroundImage: `url(${team.imageUrl})` }}></div>
+    <div className="card-team__logo">
+      <i className="fas fa-football-ball"></i>
+    </div>
+    <div className="card-team__name ms-3">{team.name}</div>
+  </div>
             ))}
           </div>
         </div>

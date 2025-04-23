@@ -4,54 +4,56 @@
     width: 100%;
     overflow: hidden;
     position: relative;
-  }
+}
 
-  @media (max-width: 1324px) {
+@media (max-width: 1324px) {
     .banner .banner-content {
-      padding: 0 !important;
+        padding: 0 !important;
     }
-  }
-  
-  .banner .banner-content {
+}
+
+.banner .banner-content {
     -webkit-transition: all 400ms;
     transition: all 400ms;
     overflow: hidden;
     height: 300px;
-  }
-  .banner .banner-content .banner-heading {
-    overflow: hidden;
-  }
+}
 
-  .banner-single {
+.banner .banner-content .banner-heading {
+    overflow: hidden;
+}
+
+.banner-single {
     padding-top: 300px; /* Ajusta según sea necesario */
     padding-bottom: 150px;
     display: flex;
     justify-content: center; /* Centra horizontalmente los elementos */
     align-items: center;    /* Centra verticalmente los elementos */
+    background-size: cover;  /* Asegura que la imagen de fondo cubra todo el contenedor */
+    background-position: center center; /* Centra la imagen */
 }
 
-  
 .banner-content {
-  padding: 0 50px;
-  position: relative;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centra los elementos verticalmente */
-  align-items: center;    /* Centra los elementos horizontalmente */
-  text-align: center;     /* Centra el texto */
+    padding: 0 50px;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra los elementos verticalmente */
+    align-items: center;    /* Centra los elementos horizontalmente */
+    text-align: center;     /* Centra el texto */
 }
 
-
-  .banner-content .banner-heading {
+.banner-content .banner-heading {
     font-size: 105px;
     font-weight: 700;
     color: #fff;
     margin-bottom: 10px;
-    font-family: 'oswald','serif';
+    font-family: 'oswald', 'serif';
     margin: 0 0 50px;
-  }
-  .banner-content .banner-btn-area .banner-btn {
+}
+
+.banner-content .banner-btn-area .banner-btn {
     padding: 13px 50px;
     border-radius: 4px;
     color: #fff;
@@ -60,100 +62,119 @@
     border: 1px solid transparent;
     -webkit-transition: all 500ms;
     transition: all 500ms;
-    font-family: 'oswald','serif';
+    font-family: 'oswald', 'serif';
     text-decoration: none;
-  }
+}
 
-  .banner-content .banner-btn-area .banner-btn i {
+.banner-content .banner-btn-area .banner-btn i {
     color: #fff;
-  }
+}
 
-  .banner-content .banner-btn-area .banner-btn.team-btn {
-    background:  #1dbebe;
+.banner-content .banner-btn-area .banner-btn.team-btn {
+    background: #1dbebe;
     border: 1px solid #1dbebe;
     margin-right: 20px;
-  }
+}
 
-  .banner-content .banner-btn-area .banner-btn.team-btn:hover {
+.banner-content .banner-btn-area .banner-btn.team-btn:hover {
     background: transparent;
     border: 1px solid #fff;
-  }
+}
 
-  .banner-content .banner-btn-area .banner-btn.team-btn:hover i {
+.banner-content .banner-btn-area .banner-btn.team-btn:hover i {
     -webkit-transform: translateX(5px);
-            transform: translateX(5px);
-  }
+    transform: translateX(5px);
+}
 
-  .banner-content .banner-btn-area .banner-btn.nxt-match-btn {
+.banner-content .banner-btn-area .banner-btn.nxt-match-btn {
     background: transparent;
     border: 1px solid #fff;
-  }
+}
 
-  .banner-content .banner-btn-area .banner-btn.nxt-match-btn:hover {
+.banner-content .banner-btn-area .banner-btn.nxt-match-btn:hover {
     background: #111111;
     border: 1px solid #111111;
-  }
-  
-  .banner-content .banner-btn-area .banner-btn.nxt-match-btn:hover i {
+}
+
+.banner-content .banner-btn-area .banner-btn.nxt-match-btn:hover i {
     -webkit-transform: translateX(5px);
-            transform: translateX(5px);
-  }
-  @media (max-width: 1200px) {
+    transform: translateX(5px);
+}
+
+/* Ajustes para pantallas medianas (por ejemplo, tabletas) */
+@media (max-width: 1200px) {
     .banner-content .banner-heading {
-      font-size: 80px;
+        font-size: 80px;
     }
-  }
-  @media (max-width: 768px) {
+}
+
+/* Ajustes para pantallas más pequeñas (móviles) */
+@media (max-width: 768px) {
     .banner-content .banner-heading {
-      font-size: 55px;
-      line-height: 60px;
-      margin-bottom: 25px;
+        font-size: 55px;
+        line-height: 60px;
+        margin-bottom: 25px;
     }
+
+    .banner-single {
+        padding-top: 150px; /* Menor altura en pantallas medianas */
+        padding-bottom: 100px; /* Menor espacio inferior */
+    }
+
     .banner-content .banner-btn-area .banner-btn {
-      padding: 10px 15px;
-      font-size: 14px;
+        padding: 10px 15px;
+        font-size: 14px;
     }
-  }
-  @media (max-width: 600px) {
+}
+
+/* Ajustes para pantallas muy pequeñas (móviles en formato retrato) */
+@media (max-width: 600px) {
     .banner-content .banner-heading {
-      font-size: 40px;
-      line-height: 50px;
-      font-weight: 500;
+        font-size: 40px;
+        line-height: 50px;
+        font-weight: 500;
     }
-  }
-  @media (max-width: 400px) {
+
+    .banner-single {
+        padding-top: 100px; /* Aún menor altura */
+        padding-bottom: 50px; /* Aún menor espacio inferior */
+    }
+}
+
+/* Ajustes para pantallas ultra pequeñas (móviles muy pequeños) */
+@media (max-width: 400px) {
     .banner-content .banner-heading {
-      font-size: 30px;
-      line-height: 40px;
+        font-size: 30px;
+        line-height: 40px;
     }
+
     .banner-content .banner-btn-area {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
+        display: flex;
+        flex-direction: column;  /* Coloca los botones en columna */
+        align-items: center;
+        gap: 10px;  /* Espacio entre los botones */
     }
+
     .banner-content .banner-btn-area .banner-btn {
-      margin-bottom: 15px;
-      margin-right: 0 !important;
+        margin-bottom: 15px;
+        margin-right: 0 !important;
     }
-  }
-  
-  .banner-bg {
+
+    .banner-single {
+        padding-top: 50px; /* Aún más pequeño para pantallas pequeñas */
+        padding-bottom: 30px; /* Aún menos espacio inferior */
+    }
+}
+
+.banner-bg {
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     position: relative;
-  }
-  .banner-bg::before {
+    height: 100vh;  /* Ajusta la altura al tamaño de la pantalla */
+}
+
+.banner-bg::before {
     content: "";
     mix-blend-mode: multiply;
     background: #0a15ed;
@@ -163,57 +184,16 @@
     left: 0;
     width: 100%;
     height: 100%;
-  }
+}
 
+.banner-single-1 {
+    background-image: url("../src/assets/img/banner2.JPG");
+}
 
-  
-  .banner-single-1 {
-    background-image: url("../src/assets/img/banner2.JPG"); 
-  }
-  
-  .banner-single-1_2 {
+.banner-single-1_2 {
     background-image: url("../src/assets/img/banner4.JPG");
-  }
-  
-  .banner-single-3 {
+}
+
+.banner-single-3 {
     background-image: url("../src/assets/img/banner3.JPG");
-  }
-
-
-  
-  
-  @media (max-width: 1200px) {
-    .inner-page-banner {
-      padding-top: 200px;
-      padding-bottom: 100px;
-    }
-  }
-  @media (max-width: 768px) {
-    .inner-page-banner {
-      padding-top: 135px;
-      padding-bottom: 100px;
-    }
-    .inner-page-banner .banner-heading {
-      font-size: 60px;
-      line-height: 50px;
-    }
-    .inner-page-banner .page-path {
-      margin-bottom: 10px;
-    }
-  }
-  @media (max-width: 520px) {
-    .inner-page-banner {
-      padding-top: 120px;
-      padding-bottom: 80px;
-    }
-    .inner-page-banner .page-path {
-      margin-bottom: 5px;
-    }
-  }
-  @media (max-width: 440px) {
-    .inner-page-banner .banner-heading {
-      font-size: 45px;
-      line-height: 55px;
-    }
-  }
-  
+}

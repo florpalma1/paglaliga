@@ -110,7 +110,7 @@ header {
   
   .grid-teams {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Tres columnas de igual tamaño */
+    grid-template-columns: repeat(4, 1fr); /* cuatro columnas de igual tamaño */
     grid-template-rows: repeat(2, 1fr); /* Dos filas de igual tamaño */
     gap: 0; /* Sin espacio entre las tarjetas */
     width: 100%; /* El contenedor ocupa todo el ancho disponible */
@@ -124,12 +124,24 @@ header {
       grid-template-rows: auto; /* Número dinámico de filas */
     }
   }
+  .card-team__number{
+    display: none;
+  }
+  .card-team__number::after {
+   display: none;
+  }
+
   
   /* Para tamaños pequeños: una columna */
   @media (max-width: 480px) {
     .grid-teams {
-      grid-template-columns: 1fr; /* Una columna */
+      grid-template-columns: repeat(2, 1fr); /* Dos columnas */
       grid-template-rows: auto; /* Número dinámico de filas */
+      height: 90vh;
+      width: 100%;
+    }
+    .underlay-text{
+      font-size: 15vw;
     }
   }
   
@@ -202,34 +214,7 @@ header {
     font-size: 3em;
   }
   
-  .card-team__number {
-    position: relative;
-    display: inline-block;
-    font-family: "Bebas Neue", serif;
-   color: #4A2FBD;
-    font-size: 50px;
-    margin-bottom: 1em;
-    transform: scaleX(0.7);
-    font-weight: 600;
-    transition: 1s var(--easing);
-    z-index: 1;
-    animation-name: slide-up-fade-in;
-    animation-delay: 1s;
-    animation-timing-function: ease-in-out;
-    animation-duration: 0.7s;
-  }
-  
-  .card-team__number::after {
-    content: '';
-    position: absolute;
-    bottom: -0.2em;
-    left: 12.5%;
-    width: 75%;
-    height: 0.05em;
-    background-color: #D6DDE0;
-    color: #D6DDE0;
-  }
-  
+
   .card-team__name {
     position: relative;
     text-transform: uppercase;
